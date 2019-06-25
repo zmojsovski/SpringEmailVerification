@@ -1,0 +1,25 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sign In</title>
+</head>
+<body>
+<h1 style="margin-left: 80px">Sign In</h1>
+<form action="#" th:action="@{/signin}" th:object="${profile}" method="post">
+    <table>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td><input th:field="*{name}" type="text" id="username" name="username"></input></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input th:field="*{password}" type="password" id="password" name="password"></input></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="rememberMe" name="rememberMe">Remember Me </td>
+            <td><input type="submit" value="Sign In"></input></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
